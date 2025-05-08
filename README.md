@@ -8,13 +8,13 @@
    => same name interface added work on one interface | same name type declare on multiple time give error. </br>
    => interface is mutable, but use on add or modify in a new interface | type use on readonly so properties are not change. </br>
 
-2. Explain the difference between any, unknown, and never types in TypeScript?
-   #any
-   => your can stored any type of value. Type checking is off.
-   #unknown
-   => type is unknown but must used in a type safe way.
-   #never
-   =>something that never happens.
+2. Explain the difference between any, unknown, and never types in TypeScript? </br>
+   #any </br>
+   => your can stored any type of value. Type checking is off. </br>
+   #unknown </br>
+   => type is unknown but must used in a type safe way. </br>
+   #never </br>
+   =>something that never happens. </br>
 
-3. How does TypeScript help in improving code quality and project maintainability?
-   => Typescript checks your code for type error compile time before runs code.with types helps rename, restructure, or refactor code safely. compiler guide to you update all dependent parts correctly.
+3. How does TypeScript help in improving code quality and project maintainability? </br>
+   => Typescript checks your code for type error compile time before runs code.with types helps rename, restructure, or refactor code safely. compiler guide to you update all dependent parts correctly. </br>
