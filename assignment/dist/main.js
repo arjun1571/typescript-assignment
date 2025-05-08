@@ -1,5 +1,4 @@
 "use strict";
-// one
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -14,26 +13,12 @@ function formatString(input, toUpper) {
         ? input.toLocaleLowerCase()
         : input.toLocaleUpperCase();
 }
-// console.log(formatString("Hello"));
-// console.log(formatString("Hello", true));
-// console.log(formatString("Hello", false));
-// two
 function filterByRating(items) {
     return items.filter((item) => item.rating >= 4);
 }
-// const books = [
-//   { title: "Book A", rating: 4.5 },
-//   { title: "Book B", rating: 3.2 },
-//   { title: "Book C", rating: 5.0 },
-// ];
-// console.log(filterByRating(books));
-// three
 function concatenateArrays(...arrays) {
     return arrays.reduce((acc, curr) => acc.concat(curr), []);
 }
-// console.log(concatenateArrays(["a", "b"], ["c"]));
-// console.log(concatenateArrays([1, 2], [3, 4], [5]));
-// four
 class Vehicle {
     constructor(make, year) {
         this.make = make;
@@ -53,9 +38,6 @@ class Car extends Vehicle {
     }
 }
 const myCar = new Car("Toyota", 2020, "Corolla");
-// console.log(myCar.getInfo());
-// console.log(myCar.getModel());
-// five
 function processValue(value) {
     return typeof value === "string" ? value.length : value * 2;
 }
@@ -64,13 +46,6 @@ function getMostExpensiveProduct(products) {
         ? null
         : products.reduce((maxProduct, currentProduct) => currentProduct.price > maxProduct.price ? currentProduct : maxProduct);
 }
-const products = [
-    { name: "Pen", price: 10 },
-    { name: "Notebook", price: 25 },
-    { name: "Bag", price: 50 },
-];
-console.log(getMostExpensiveProduct(products));
-// seven
 var Day;
 (function (Day) {
     Day[Day["Monday"] = 0] = "Monday";
@@ -84,9 +59,6 @@ var Day;
 function getDayType(day) {
     return day === Day.Saturday || day === Day.Sunday ? "Weekend" : "Weekday";
 }
-// console.log(getDayType(Day.Monday));
-// console.log(getDayType(Day.Sunday));
-// eight
 function squareAsync(n) {
     return __awaiter(this, void 0, void 0, function* () {
         return n < 0
