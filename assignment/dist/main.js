@@ -1,5 +1,14 @@
 "use strict";
 // one
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 function formatString(input, toUpper) {
     return toUpper === false
         ? input.toLocaleLowerCase()
@@ -61,3 +70,33 @@ const products = [
     { name: "Bag", price: 50 },
 ];
 console.log(getMostExpensiveProduct(products));
+// seven
+var Day;
+(function (Day) {
+    Day[Day["Monday"] = 0] = "Monday";
+    Day[Day["Tuesday"] = 1] = "Tuesday";
+    Day[Day["Wednesday"] = 2] = "Wednesday";
+    Day[Day["Thursday"] = 3] = "Thursday";
+    Day[Day["Friday"] = 4] = "Friday";
+    Day[Day["Saturday"] = 5] = "Saturday";
+    Day[Day["Sunday"] = 6] = "Sunday";
+})(Day || (Day = {}));
+function getDayType(day) {
+    return day === Day.Saturday || day === Day.Sunday ? "Weekend" : "Weekday";
+}
+// console.log(getDayType(Day.Monday));
+// console.log(getDayType(Day.Sunday));
+// eight
+function squareAsync(n) {
+    return __awaiter(this, void 0, void 0, function* () {
+        return n < 0
+            ? Promise.reject(new Error("Negative number not allowed"))
+            : new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve(n * n);
+                }, 1000);
+            });
+    });
+}
+squareAsync(4).then(console.log);
+squareAsync(-3).catch(console.error);

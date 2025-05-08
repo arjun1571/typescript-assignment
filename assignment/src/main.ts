@@ -97,3 +97,37 @@ const products = [
 ];
 
 console.log(getMostExpensiveProduct(products));
+
+// seven
+
+enum Day {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,
+}
+
+function getDayType(day: Day): string {
+  return day === Day.Saturday || day === Day.Sunday ? "Weekend" : "Weekday";
+}
+
+// console.log(getDayType(Day.Monday));
+// console.log(getDayType(Day.Sunday));
+
+// eight
+
+async function squareAsync(n: number): Promise<number> {
+  return n < 0
+    ? Promise.reject(new Error("Negative number not allowed"))
+    : new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(n * n);
+        }, 1000);
+      });
+}
+
+squareAsync(4).then(console.log);
+squareAsync(-3).catch(console.error);
