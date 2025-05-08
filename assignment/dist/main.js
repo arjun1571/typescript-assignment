@@ -44,5 +44,20 @@ class Car extends Vehicle {
     }
 }
 const myCar = new Car("Toyota", 2020, "Corolla");
-console.log(myCar.getInfo());
-console.log(myCar.getModel());
+// console.log(myCar.getInfo());
+// console.log(myCar.getModel());
+// five
+function processValue(value) {
+    return typeof value === "string" ? value.length : value * 2;
+}
+function getMostExpensiveProduct(products) {
+    return products.length === 0
+        ? null
+        : products.reduce((maxProduct, currentProduct) => currentProduct.price > maxProduct.price ? currentProduct : maxProduct);
+}
+const products = [
+    { name: "Pen", price: 10 },
+    { name: "Notebook", price: 25 },
+    { name: "Bag", price: 50 },
+];
+console.log(getMostExpensiveProduct(products));
